@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitionnal//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+	<head>
+		<title>Le plug-in imageSlide !</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=charset=iso-8859-1" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.imageSlide.js"></script>
+		<script type="text/javascript">			
+			$(function()
+			{
+				$('#galerie').imageSlide(); //Appel par défaut du plug-in
+			});
+        </script>
+        <script src="pluginimage.js"></script>
+        <script src="scriptimage.js"></script>
+	</head>
+	<body>
+		<div style="text-align: center;">
+			<h1>Le plug-in imageSlide !</h1>
+			<p id="galerie" style="margin: auto;">
+				<img src="1.jpg" title="Zèbre" alt="http://fr.wikipedia.org/wiki/Z%C3%A8bre" />
+				<img src="2.jpg" title="Pont" alt="http://fr.wikipedia.org/wiki/Pont" />
+				<img src="3.jpg" title="Plage" alt="http://fr.wikipedia.org/wiki/Plage" />
+				<img src="4.jpg" title="Fleurs" alt="http://fr.wikipedia.org/wiki/Fleur" />
+			</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Effects & Animate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <style>
+        body {
+
+            font-size: 10px;
+            font-family: arial;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+
+        header {
+            background: rgb(6, 94, 89);
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+
+        #container {
+
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        #box {
+
+            background: rgb(6, 94, 89);
+            color: #fff;
+           /* width: 500px;
+            height: 190px;*/
+            padding: 40px;
+            text-align: center;
+        }
+
+        #box2 {
+
+            background: #e53935 ;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Les Effects & Animations <br><h6>Jquery</h6></h1>
+    </header>
+    <div id="container">
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li id="btnFadeOut"><a>Fade Out</a></li>
+                    <li id="btnFadeIn"><a>Fade In</a></li>
+                    <li id="btnFadeTog"><a>Fade Toggle</a></li>
+                    <li id="btnSlideUp"><a>Slide Up</a></li>
+                    <li id="btnSlideDown"><a>SlideDown</a></li>
+                    <li id="btnSlideTog"><a>Slide Toggle</a></li>
+                    <li id="btnStop"><a>Stop</a></li>
+                    <li id="moveLeft" ><a>Move Left</a></li>
+                    <li id="moveRight" ><a>Move Right</a></li>
+                    <li id="moveAround"><a>Move Around</a></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="card-panel teal lighten-2" id="box" ><h1>"Write less, do more" <br><h6>"Binde touti,def lou beury"</h6></h1></div>
+        <div class="card-panel" id="box2"></div>
+<div>
+           <button  id="p1" class="">clicker ! </button>
+      <!--   <p id="p1" style="background-color: #0091ea">1-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi omnis voluptatum eos ipsum iure sunt provident quaerat, dolore nostrum id rem maiores earum iste perferendis fugit quis consectetur? Iusto, obcaecati!</p> -->
+        <p id="p2" style="background-color: #0091ea">2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi nisi porro vero eveniet aliquam sit rerum aut placeat error accusamus minus ipsum quos, impedit adipisci, iure dicta atque accusantium!</p>
+        <p id="p3" style="background-color: #ff1744 ">3-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi omnis voluptatum eos ipsum iure sunt provident quaerat, dolore nostrum id rem maiores earum iste perferendis fugit quis consectetur? Iusto, obcaecati!</p>
+        <p id="p4" style="background-color: #00e5ff ">4-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi nisi porro vero eveniet aliquam sit rerum aut placeat error accusamus minus ipsum quos, impedit adipisci, iure dicta atque accusantium!</p>
+        <p id="p5" style="background-color: #00e676">5-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi omnis voluptatum eos ipsum iure sunt provident quaerat, dolore nostrum id rem maiores earum iste perferendis fugit quis consectetur? Iusto, obcaecati!</p>
+        <p id="p6" style="background-color: #004d40">6-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi nisi porro vero eveniet aliquam sit rerum aut placeat error accusamus minus ipsum quos, impedit adipisci, iure dicta atque accusantium!</p>
+</div>
+        
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#btnFadeOut').click(function () {
+           //################## La Fonction fadeOut()permet de cacher box avec une dure de 3s soit 30000ms ########################//
+
+                $('#box').fadeOut(5000);
+            });
+            $('#btnFadeIn').click(function () {
+           //################## La Fonction fadeIn()permet de cacher box avec une dure de 3s soit 30000ms ########################//
+
+                $('#box').fadeIn(3000);
+            });
+            $('#btnFadeTog').click(function () {
+           //################## La Fonction fadeToggle()permet de cacher box si il etait afficher ou de l afficher au cas echeant  avec une dure de 1s soit 1000ms ########################//
+
+                $('#box').fadeToggle(1000);
+            });
+            $('#btnSlideDown').click(function () {
+            
+           //################## La Fonction slideDown()permet de cacher box avec une dure de 3s soit 30000ms ########################//
+                
+                $('#box').slideDown(3000);
+            });
+            $('#btnSlideUp').click(function () {
+           //################## La Fonction slideUp()permet de cacher box avec une dure de 3s soit 30000ms ########################//
+
+                $('#box').slideUp(3000);
+            });
+            $('#btnSlideTog').click(function () {
+           //################## La Fonction slideToggle()permet de cacher box avec une dure de 3s soit 30000ms ########################//
+
+                $('#box').slideToggle(3000);
+            });
+            $('#btnStop').click(function () {
+           //################## La Fonction stop()permet de cacher box avec une dure de 3s soit 30000ms ########################//
+
+                $('#box').stop();
+            });
+            $('#moveRight').click(function () {
+           //################## La Fonction animate()permet de cacher box avec une dure de 3s soit 30000ms ########################//
+
+                $('#box2').animate({
+                    left: 500,
+                    height: '300px',
+                    width: '300px',
+                    opacity: '0.5'
+                });
+            });
+            $('#moveLeft').click(function () {
+                $('#box2').animate({
+                    left: 0,
+                    height: '100px',
+                    width: '100px',
+                    opacity: '1'
+                });
+            });
+            $('#moveAround').click(function () {
+                var box = $('#box2');
+                box.animate({
+                    left: 300
+                });
+                box.animate({
+                    top: 300
+                });
+                box.animate({
+                    left: 0,
+                    top: 300
+                });
+                box.animate({
+                    left: 0,
+                    top: 0
+                });
+                box.animate({
+                    left: 300,
+                    
+                });
+                box.animate({
+                    left: 0,
+                    
+                });
+
+
+                box.animate({
+                    left: 800,
+                    
+                });
+                box.animate({
+                    left: 0,
+                    
+                });
+                box.animate({
+                    left: 100,
+                    
+                });
+                box.animate({
+                    left: 0,
+                    
+                });
+            });
+           //##################Fonction avec call back ########################//
+            $("#p1").click(function(){
+                $('#p2').toggle(3000,function(){
+                    $('#p3').toggle(3000,function() {
+                        $('#p4').toggle(3000,function () {
+                            $('#p5').toggle(3000, function () {
+                                $('#p6').toggle(3000);
+                            }) 
+                        });
+                    }); 
+                }); 
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
